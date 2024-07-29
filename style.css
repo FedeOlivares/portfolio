@@ -374,9 +374,8 @@ body {
 .email,
 .company,
 .message {
-    border-radius: 40px;
+    border-radius: 6px;
     background-color: lightgray;
-    
 }
 
 
