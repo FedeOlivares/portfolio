@@ -414,3 +414,20 @@ body {
         max-width: 4vw;
     }
 }
+
+.contactHead {
+    background-color: grey;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 10vw;
+    min-height: 30vh;
+}
+
+.contactLeft,
+.contactRight {
+    display: flex; 
+    min-width: 25vw;
+    min-height: 25vh;
+    justify-content: center;
+}
