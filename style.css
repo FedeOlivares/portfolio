@@ -425,10 +425,14 @@ body {
 
 .contactHead h3 {
     font-size: 4vw;
+    margin: 1vw;
+    margin-left: 0;
 }
 
 .contactHead p {
-    font-size: 2.5vw;
+    font-size: 3vw;
+    margin: 0.5vw;
+    margin-left: 0;
 }
 
 .contactRight {
