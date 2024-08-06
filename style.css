@@ -354,7 +354,7 @@ body {
     align-items: center;
     flex-wrap: wrap;
     max-width: 70vw;
-    min-height: 85vh;
+    min-height: 50vh;
 }
 
 .contactForm form {
@@ -362,7 +362,7 @@ body {
     justify-content: left;
     align-content: center;
     flex-wrap: wrap;
-    background-color: #1F2937;
+    background-color: #c1c8d6;
     border-radius: 2vh;
     padding: 2vw;
     min-width: 65vw;
@@ -375,7 +375,7 @@ body {
 .company,
 .message {
     border-radius: 6px;
-    background-color: lightgray;
+    background-color: #F9FAF8;
 }
 
 
@@ -416,18 +416,49 @@ body {
 }
 
 .contactHead {
-    background-color: grey;
+    background-color: #E5E7EB;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    gap: 10vw;
-    /* min-height: 30vh; */
+    min-height: 55vw;
 }
 
-.contactLeft,
+.contactHead h3 {
+    font-size: 4vw;
+}
+
+.contactHead p {
+    font-size: 2.5vw;
+}
+
 .contactRight {
-    display: flex; 
-   /* min-width: 25vw;
-    min-height: 25vh; */
+    display: flex;
+    flex-direction: column;
     justify-content: center;
+    min-width: 20vw;
+    max-width: 35vw;
+}
+
+@media (min-width: 650px) {
+    .contactHead {
+        min-height: 35vh;
+    }
+    .contactHead h3 {
+        font-size: calc(5.5vh - 0.5vw);
+    }
+    .contactHead p {
+        font-size: calc(3.5vh - 0.5vw);
+    }
+}
+
+.contactLeft {
+    min-width: 50vw;
+    max-width: 50vw;
+    justify-content: center;
+}
+@media (min-width: 650px) {
+    .contactLeft {
+        min-width: 35vw;
+        max-width: 40vw;
+    }
 }
