@@ -404,13 +404,13 @@ body {
 .contactForm .contact {
     margin-left: 1vw;
     justify-self: right;
-    font-size: 3vw;
+    font-size: 2.5vw;
     min-width: 10vw;
 }
 
 @media (min-width: 600px) { 
     .contactForm .contact {
-        font-size: 2.15vh;
+        font-size: 2.2vh;
         max-width: 4vw;
     }
 }
