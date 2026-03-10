@@ -11,7 +11,7 @@
   <title>Federico Olivares — Desarrollador Full Stack</title>
 </head>
 <body>
-
+<div class="spotlight" id="spotlight"></div>
   <!-- NAV -->
   <nav>
     <div class="nav-inner">
@@ -222,6 +222,12 @@
       entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
     }, { threshold: 0.1 });
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    const spotlight = document.getElementById('spotlight');
+window.addEventListener('mousemove', e => {
+  spotlight.style.setProperty('--x', e.clientX + 'px');
+  spotlight.style.setProperty('--y', e.clientY + 'px');
+});
   </script>
 
 </body>
