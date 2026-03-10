@@ -1,71 +1,135 @@
 <!DOCTYPE html>
-<html lang="esp">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Contactá a Federico Olivares — Desarrollador Full Stack.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-  <link href="style.css" rel="stylesheet">
-  <link rel="icon" href="favicon.png">
-
-  <title>Federico Olivares</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Contacto — Federico Olivares</title>
 </head>
-
 <body>
 
-  <div class="header">  
-    <a href="./esp.html" class="logo">Federico O. Z.</a>
-    <ul class="navLinks">
-      <li><a href="./contact.html">English</a></li>
-      <li><a href="#">Porfolio</a></li>
-      <li><a href="./contacto.html">Contacto</a></li>
-    </ul>
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a href="esp.html" class="nav-logo">Federico<span>.</span></a>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="contact.html">English</a></li>
+        <li><a href="esp.html#proyectos">Proyectos</a></li>
+        <li><a href="contacto.html" class="nav-cta">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <div class="contact-hero">
+    <div class="container">
+      <div class="tag">Contacto</div>
+      <h1>Construyamos algo<br>juntos</h1>
+      <p>¿Tenés una idea o un proyecto en mente? Completá el formulario y te respondo lo antes posible.</p>
+    </div>
   </div>
 
-  <div class="contactHead">
-    <div class="contactLeft">
-      <img src="images/webdev.svg" alt="Image of website on different devices">      
-    </div>
+  <!-- CONTACT LAYOUT -->
+  <div class="container">
+    <div class="contact-layout">
 
-    <div class="contactRight">
-      <h3>Aprovecha al maximo tu negocio</h3><p>Contactame hoy</p>
-    </div>
+      <!-- Info column -->
+      <aside class="contact-info reveal">
+        <h3>Qué podés esperar</h3>
 
+        <div class="contact-info-item">
+          <div class="contact-info-icon">⚡</div>
+          <div class="contact-info-text">
+            <strong>Respuesta rápida</strong>
+            <span>Normalmente respondo en menos de 24 horas en días hábiles.</span>
+          </div>
+        </div>
+
+        <div class="contact-info-item">
+          <div class="contact-info-icon">🔒</div>
+          <div class="contact-info-text">
+            <strong>Confidencial</strong>
+            <span>Tu información es privada y nunca se comparte con terceros.</span>
+          </div>
+        </div>
+
+        <div class="contact-info-item">
+          <div class="contact-info-icon">🤝</div>
+          <div class="contact-info-text">
+            <strong>Sin compromiso</strong>
+            <span>Primero hablamos. No hay ninguna obligación de tu parte.</span>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Form -->
+      <div class="form-card reveal">
+        <form action="https://formspree.io/f/mldrjqvy" method="POST">
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstname">Nombre <span style="color:var(--accent)">*</span></label>
+              <input id="firstname" type="text" name="firstname" required placeholder="Juan">
+            </div>
+            <div class="form-group">
+              <label for="lastname">Apellido</label>
+              <input id="lastname" type="text" name="lastname" placeholder="Pérez">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email <span style="color:var(--accent)">*</span></label>
+            <input id="email" type="email" name="email" required placeholder="juan@ejemplo.com">
+          </div>
+
+          <div class="form-group">
+            <label for="company">Empresa / Negocio</label>
+            <input id="company" type="text" name="Company Name" placeholder="Mi empresa S.A.">
+          </div>
+
+          <div class="form-group">
+            <label for="message">Mensaje <span style="color:var(--accent)">*</span></label>
+            <textarea id="message" name="subject" required placeholder="Hola Federico, me gustaría hablar sobre..."></textarea>
+          </div>
+
+          <button type="submit" class="form-submit">Enviar mensaje →</button>
+
+        </form>
+      </div>
+
+    </div>
   </div>
-  <div class="form">
 
-    <div>
-      <h2>Tenés una idea?</h2>
-      <p>Hagamosla realidad juntos</p>
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <span class="footer-logo">Federico<span>.</span></span>
+        <span class="footer-copy">© 2024 Federico Olivares. Todos los derechos reservados.</span>
+      </div>
     </div>
+  </footer>
 
-    <div class="contactForm">
-      <form   action="https://formspree.io/f/mldrjqvy" method="POST">
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const links  = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => {
+      toggle.classList.toggle('open');
+      links.classList.toggle('open');
+    });
 
-  
-        <input class="name" type="text" name="firstname" required placeholder=" Tu nombre ...">
-      
-        <input class="name" type="text" name="lastname" placeholder=" Tu Apellido ... ">
-          
-        <input class="email" type="email" name="email" required placeholder=" Tu email ...">
-
-        <input class="company" type="text" name="Company Name" placeholder=" Negocio / Empresa ...">
-          
-        <textarea class="message" type="text" name="subject" required placeholder=" Hola, me gustaría  ... "></textarea>
-      
-        <button type="submit" class="contact"> Submit </button>
-
-  
-      </form>
-    </div>
-
-  </div>
-
-
-  <div class="footer"> 
-    Copyright 2024 - Federico Olivares
-  </div>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
 
 </body>
 </html>
