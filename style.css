@@ -1,4 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap');
+/* =============================================
+   FEDERICO OLIVARES — PORTFOLIO
+   Dark, minimal, sharp. Mobile-first.
+   ============================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Inter:wght@300;400;500&display=swap');
 
 /* ── Reset & Base ── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -14,8 +19,8 @@
   --accent2:   #a89af9;
   --white:     #ffffff;
   --radius:    10px;
-  --font-head: 'Syne', sans-serif;
-  --font-body: 'DM Sans', sans-serif;
+  --font-head: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
   --nav-h:     64px;
 }
 
@@ -86,7 +91,7 @@ nav {
   font-family: var(--font-head);
   font-weight: 800;
   font-size: 1.1rem;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
   color: var(--white);
 }
 .nav-logo span { color: var(--accent); }
@@ -213,17 +218,18 @@ nav {
   font-family: var(--font-head);
   font-size: clamp(2.6rem, 8vw, 4.8rem);
   font-weight: 800;
-  line-height: 1.08;
-  letter-spacing: -0.03em;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
   color: var(--white);
 }
 .hero h1 .accent { color: var(--accent2); }
 
 .hero-sub {
   font-size: 1.05rem;
+  font-weight: 300;
   color: var(--muted);
   max-width: 480px;
-  line-height: 1.7;
+  line-height: 1.75;
 }
 
 .hero-actions {
@@ -291,19 +297,20 @@ section {
 .section-head h2 {
   font-family: var(--font-head);
   font-size: clamp(1.8rem, 5vw, 2.6rem);
-  font-weight: 800;
-  letter-spacing: -0.03em;
+  font-weight: 700;
+  letter-spacing: -0.02em;
   color: var(--white);
   margin-bottom: 12px;
 }
 .section-head p {
   color: var(--muted);
   font-size: 1rem;
+  font-weight: 300;
   max-width: 480px;
-  line-height: 1.7;
+  line-height: 1.75;
 }
 
-/* ── ABOUT / SERVICES ── */
+/* ── SERVICES ── */
 .services-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -340,7 +347,7 @@ section {
 }
 .service-card h3 {
   font-family: var(--font-head);
-  font-weight: 700;
+  font-weight: 600;
   font-size: 1rem;
   color: var(--white);
   margin-bottom: 8px;
@@ -348,8 +355,9 @@ section {
 }
 .service-card p {
   font-size: 0.875rem;
+  font-weight: 300;
   color: var(--muted);
-  line-height: 1.65;
+  line-height: 1.7;
 }
 
 /* ── PROJECTS ── */
@@ -410,7 +418,7 @@ section {
 }
 .project-body h3 {
   font-family: var(--font-head);
-  font-weight: 700;
+  font-weight: 600;
   font-size: 1rem;
   color: var(--white);
   margin-bottom: 6px;
@@ -418,8 +426,9 @@ section {
 }
 .project-body p {
   font-size: 0.85rem;
+  font-weight: 300;
   color: var(--muted);
-  line-height: 1.6;
+  line-height: 1.65;
   flex: 1;
 }
 .project-tags {
@@ -453,7 +462,7 @@ section {
   font-size: clamp(1.1rem, 3vw, 1.5rem);
   font-weight: 600;
   color: var(--text);
-  line-height: 1.5;
+  line-height: 1.55;
   letter-spacing: -0.01em;
   margin-bottom: 20px;
 }
@@ -462,6 +471,7 @@ section {
 
 .quote-author {
   font-size: 0.8rem;
+  font-weight: 400;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--muted);
@@ -494,15 +504,16 @@ section {
 .cta-box h2 {
   font-family: var(--font-head);
   font-size: clamp(1.6rem, 4vw, 2.4rem);
-  font-weight: 800;
-  letter-spacing: -0.03em;
+  font-weight: 700;
+  letter-spacing: -0.02em;
   color: var(--white);
   max-width: 560px;
-  line-height: 1.2;
+  line-height: 1.25;
 }
 .cta-box p {
   color: var(--muted);
   font-size: 1rem;
+  font-weight: 300;
   max-width: 440px;
 }
 @media (min-width: 700px) {
@@ -528,13 +539,14 @@ footer {
 }
 .footer-logo {
   font-family: var(--font-head);
-  font-weight: 800;
+  font-weight: 700;
   font-size: 1rem;
   color: var(--white);
 }
 .footer-logo span { color: var(--accent); }
 .footer-copy {
   font-size: 0.8rem;
+  font-weight: 300;
   color: var(--muted);
 }
 @media (min-width: 600px) {
@@ -552,17 +564,18 @@ footer {
 .contact-hero h1 {
   font-family: var(--font-head);
   font-size: clamp(2rem, 6vw, 3.6rem);
-  font-weight: 800;
-  letter-spacing: -0.03em;
+  font-weight: 700;
+  letter-spacing: -0.02em;
   color: var(--white);
-  line-height: 1.1;
+  line-height: 1.15;
   margin-bottom: 16px;
 }
 .contact-hero p {
   font-size: 1rem;
+  font-weight: 300;
   color: var(--muted);
   max-width: 420px;
-  line-height: 1.7;
+  line-height: 1.75;
 }
 
 .contact-layout {
@@ -577,7 +590,7 @@ footer {
 
 .contact-info h3 {
   font-family: var(--font-head);
-  font-weight: 700;
+  font-weight: 600;
   font-size: 1rem;
   color: var(--white);
   margin-bottom: 20px;
@@ -610,10 +623,11 @@ footer {
 }
 .contact-info-text span {
   font-size: 0.82rem;
+  font-weight: 300;
   color: var(--muted);
 }
 
-/* Form */
+/* ── Form ── */
 .form-card {
   background: var(--bg2);
   border: 1px solid var(--border);
@@ -639,10 +653,10 @@ footer {
   margin-bottom: 14px;
 }
 .form-group label {
-  font-size: 0.78rem;
+  font-size: 0.75rem;
   font-weight: 500;
   color: var(--muted);
-  letter-spacing: 0.04em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 .form-group input,
@@ -653,13 +667,14 @@ footer {
   color: var(--text);
   font-family: var(--font-body);
   font-size: 0.9rem;
+  font-weight: 300;
   padding: 11px 14px;
   outline: none;
   transition: border-color 0.2s;
   width: 100%;
 }
 .form-group input::placeholder,
-.form-group textarea::placeholder { color: var(--muted); opacity: 0.7; }
+.form-group textarea::placeholder { color: var(--muted); opacity: 0.6; }
 .form-group input:focus,
 .form-group textarea:focus { border-color: var(--accent); }
 .form-group textarea {
