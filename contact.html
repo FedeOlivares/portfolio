@@ -2,70 +2,134 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Get in touch with Federico Olivares — Full Stack Developer.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-  <link href="style.css" rel="stylesheet">
-  <link rel="icon" href="favicon.png">
-
-  <title>Federico Olivares</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Contact — Federico Olivares</title>
 </head>
-
 <body>
 
-  <div class="header">  
-    <a href="index.html" class="logo">Federico O. Z.</a>
-    <ul class="navLinks">
-      <li><a href="./contacto.html">Español</a></li>
-      <li><a href="#">Portfolio</a></li>
-      <li><a href="./contact.html">Contact</a></li>
-    </ul>
-  </div>
-
-  <div class="contactHead">
-    <div class="contactLeft">
-      <img src="images/webdev.svg" alt="Image of website on different devices">      
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Federico<span>.</span></a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="contacto.html">Español</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="contact.html" class="nav-cta">Contact</a></li>
+      </ul>
     </div>
+  </nav>
 
-    <div class="contactRight">
-      <h3>Get the most out of your business</h3><p> Get in touch today!</p>
-    </div>
-
-  </div>
-
-  <div class="form">
-
-    <div>
-      <h2>You've got an idea?</h2>
-      <p>Let's make it into reality together!</p>
-    </div>
-
-    <div class="contactForm">
-      <form   action="https://formspree.io/f/mldrjqvy" method="POST">
-    
-
-        <input class="name" type="text" name="firstname" required placeholder="Your name..">
-      
-        <input class="name" type="text" name="lastname" placeholder="Your last name..">
-          
-        <input class="email" type="email" name="email" required placeholder="Your email..">
-
-        <input class="company" type="text" name="Company Name" placeholder="Your company/business ..">
-          
-        <textarea class="message" type="text" name="subject" required placeholder="Your message here ..."></textarea>
-      
-        <button type="submit" class="contact"> Submit </button>
-  
-
-      </form>
+  <!-- HERO -->
+  <div class="contact-hero">
+    <div class="container">
+      <div class="tag">Contact</div>
+      <h1>Let's build something<br>together</h1>
+      <p>Have an idea or a project in mind? Fill out the form and I'll get back to you as soon as possible.</p>
     </div>
   </div>
 
+  <!-- CONTACT LAYOUT -->
+  <div class="container">
+    <div class="contact-layout">
 
-  <div class="footer"> 
-    Copyright 2024 - Federico Olivares
+      <!-- Info column -->
+      <aside class="contact-info reveal">
+        <h3>What to expect</h3>
+
+        <div class="contact-info-item">
+          <div class="contact-info-icon">⚡</div>
+          <div class="contact-info-text">
+            <strong>Fast response</strong>
+            <span>I typically reply within 24 hours on business days.</span>
+          </div>
+        </div>
+
+        <div class="contact-info-item">
+          <div class="contact-info-icon">🔒</div>
+          <div class="contact-info-text">
+            <strong>Confidential</strong>
+            <span>Your information stays private and is never shared.</span>
+          </div>
+        </div>
+
+        <div class="contact-info-item">
+          <div class="contact-info-icon">🤝</div>
+          <div class="contact-info-text">
+            <strong>No commitment</strong>
+            <span>Let's just talk first. No obligation on your end.</span>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Form -->
+      <div class="form-card reveal">
+        <form action="https://formspree.io/f/mldrjqvy" method="POST">
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstname">First name <span style="color:var(--accent)">*</span></label>
+              <input id="firstname" type="text" name="firstname" required placeholder="John">
+            </div>
+            <div class="form-group">
+              <label for="lastname">Last name</label>
+              <input id="lastname" type="text" name="lastname" placeholder="Doe">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email <span style="color:var(--accent)">*</span></label>
+            <input id="email" type="email" name="email" required placeholder="john@example.com">
+          </div>
+
+          <div class="form-group">
+            <label for="company">Company / Business</label>
+            <input id="company" type="text" name="Company Name" placeholder="Acme Inc.">
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message <span style="color:var(--accent)">*</span></label>
+            <textarea id="message" name="subject" required placeholder="Hi Federico, I'd like to discuss a project..."></textarea>
+          </div>
+
+          <button type="submit" class="form-submit">Send message →</button>
+
+        </form>
+      </div>
+
+    </div>
   </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <span class="footer-logo">Federico<span>.</span></span>
+        <span class="footer-copy">© 2024 Federico Olivares. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const links  = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => {
+      toggle.classList.toggle('open');
+      links.classList.toggle('open');
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
 
 </body>
 </html>
