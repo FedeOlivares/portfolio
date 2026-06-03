@@ -19,7 +19,7 @@
       <button class="pages-toggle" id="navToggle" aria-label="Toggle menu">Pages <span class="pages-chevron">▾</span></button>
       <ul class="nav-links" id="navLinks">
         <li><a href="esp.html">Español</a></li>
-        <li><a href="#projects">Projects</a></li>
+        <li><a href="#projects" class="active">Projects</a></li>
         <li><a href="contact.html" class="nav-cta">Contact</a></li>
       </ul>
     </div>
@@ -160,20 +160,6 @@
   </footer>
 
   <script>
-    // Mobile nav
-    const toggle = document.getElementById('navToggle');
-    const links  = document.getElementById('navLinks');
-    toggle.addEventListener('click', () => {
-      toggle.classList.toggle('open');
-      links.classList.toggle('open');
-    });
-    links.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => {
-        toggle.classList.remove('open');
-        links.classList.remove('open');
-      });
-    });
-
     // Scroll reveal
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });

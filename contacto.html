@@ -21,7 +21,7 @@
       <ul class="nav-links" id="navLinks">
         <li><a href="contact.html">English</a></li>
         <li><a href="esp.html#proyectos">Proyectos</a></li>
-        <li><a href="contacto.html" class="nav-cta">Contacto</a></li>
+        <li><a href="contacto.html" class="nav-cta active">Contacto</a></li>
       </ul>
     </div>
   </nav>
@@ -117,13 +117,6 @@
   </footer>
 
   <script>
-    const toggle = document.getElementById('navToggle');
-    const links  = document.getElementById('navLinks');
-    toggle.addEventListener('click', () => {
-      toggle.classList.toggle('open');
-      links.classList.toggle('open');
-    });
-
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
     }, { threshold: 0.1 });

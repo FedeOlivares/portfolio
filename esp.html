@@ -19,7 +19,7 @@
       <button class="pages-toggle" id="navToggle" aria-label="Abrir menú">Páginas <span class="pages-chevron">▾</span></button>
       <ul class="nav-links" id="navLinks">
         <li><a href="index.html">English</a></li>
-        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#proyectos" class="active">Proyectos</a></li>
         <li><a href="contacto.html" class="nav-cta">Contacto</a></li>
       </ul>
     </div>
@@ -160,19 +160,6 @@
   </footer>
 
   <script>
-    const toggle = document.getElementById('navToggle');
-    const links  = document.getElementById('navLinks');
-    toggle.addEventListener('click', () => {
-      toggle.classList.toggle('open');
-      links.classList.toggle('open');
-    });
-    links.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => {
-        toggle.classList.remove('open');
-        links.classList.remove('open');
-      });
-    });
-
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
     }, { threshold: 0.1 });

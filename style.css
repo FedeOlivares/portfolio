@@ -117,15 +117,6 @@ nav {
   opacity: 1;
 }
 
-/* nav-cta looks identical to other links — active class handles highlight */
-.nav-links .nav-cta {
-  color: var(--muted);
-  background: transparent;
-  padding: 6px 12px;
-  font-weight: 400;
-  transition: color 0.2s, background 0.2s;
-}
-.nav-links .nav-cta:hover { color: var(--text); background: var(--bg3); opacity: 1; }
 
 /* Mobile nav — Pages dropdown */
 .pages-toggle {
@@ -184,9 +175,6 @@ nav {
     width: 100%;
     display: block;
     border-radius: 8px;
-  }
-  .nav-links .nav-cta {
-    margin-top: 0;
   }
 }
 
