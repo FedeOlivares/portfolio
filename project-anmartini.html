@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ana Martini — Online Course Platform. A full-stack LMS built with Django and React.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Ana Martini — Federico Olivares</title>
+</head>
+<body>
+<div class="spotlight" id="spotlight"></div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Federico<span>.</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="esp.html">Español</a></li>
+      <li><a href="index.html#projects">Projects</a></li>
+      <li><a href="contact.html" class="nav-cta">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- PROJECT HERO -->
+<section class="project-detail-hero">
+  <div class="container">
+    <a href="index.html#projects" class="back-link">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M13 7H1M7 1L1 7l6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Back to projects
+    </a>
+    <div class="project-detail-head">
+      <div class="tag">Case Study</div>
+      <h1>Ana Martini<br><span class="accent">Course Platform</span></h1>
+      <p class="hero-sub">A full-stack learning management system built for a professional makeup artist — from registration to course delivery, all under one roof.</p>
+      <a href="https://anniegrafica.up.railway.app/" target="_blank" rel="noopener" class="btn-primary">
+        View live site
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- SCREENSHOT -->
+<section class="project-screenshot-section">
+  <div class="container">
+    <div class="project-mockup reveal">
+      <img src="images/anmartini.jpg" alt="Ana Martini platform on mobile">
+    </div>
+  </div>
+</section>
+
+<!-- STACK -->
+<section class="project-info-section">
+  <div class="container">
+    <div class="project-info-grid">
+
+      <div class="project-info-block reveal">
+        <h2>Stack</h2>
+        <ul class="stack-list">
+          <li><span class="stack-label">Backend</span> Django 6 · Django REST Framework · Simple JWT</li>
+          <li><span class="stack-label">Frontend</span> React 19 · Vite · Zustand · React Query · Axios</li>
+          <li><span class="stack-label">Database</span> PostgreSQL (Railway)</li>
+          <li><span class="stack-label">Auth</span> JWT with token rotation and blacklisting</li>
+          <li><span class="stack-label">Email</span> Gmail SMTP — password resets & admin notifications</li>
+          <li><span class="stack-label">Static files</span> Whitenoise</li>
+          <li><span class="stack-label">Hosting</span> Railway — Django API + React static site + PostgreSQL</li>
+          <li><span class="stack-label">Video</span> YouTube embed — no storage costs, scales freely</li>
+        </ul>
+      </div>
+
+      <div class="project-info-block reveal">
+        <h2>About the project</h2>
+        <p>Ana Martini is a professional makeup artist with 15 years of experience across social, artistic, children's, and carnival makeup. She needed a platform to sell and deliver her online courses — simple for her to manage, clean for her students to use.</p>
+        <p>The result is a full-stack LMS with course browsing, user registration, JWT-authenticated access control, and a built-in messaging system where students can contact the instructor directly and request course access.</p>
+        <p>Course content is structured as Courses → Modules → Videos, with a mix of free preview content and locked paid lessons. Students can see what's inside before committing.</p>
+      </div>
+
+      <div class="project-info-block reveal">
+        <h2>Key decisions</h2>
+        <p><strong>YouTube for video hosting.</strong> Rather than storing video files in the cloud — which adds storage and bandwidth costs immediately — all course videos are embedded from YouTube. This keeps hosting costs at zero while the business grows, and can be migrated to a dedicated CDN later when scale justifies it.</p>
+        <p><strong>Manual access grant.</strong> There's no payment gateway integrated yet. Students request access through the messaging system, Ana confirms payment externally (bank transfer, etc.), and grants access manually via the admin panel. Simple and practical for an early-stage operation.</p>
+        <p><strong>Flat admin.</strong> No Django admin — a custom React admin panel gives Ana full control over users, courses, modules, videos, and messages without any technical knowledge required.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- BACK CTA -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-box reveal">
+      <div class="cta-text">
+        <h2>Have a project in mind?</h2>
+        <p>I build end-to-end web products. Let's talk about yours.</p>
+      </div>
+      <a href="contact.html" class="btn-primary">
+        Get in touch
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <span class="footer-logo">Federico<span>.</span></span>
+      <span class="footer-copy">© 2025 Federico Olivares. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const toggle = document.getElementById('navToggle');
+  const links  = document.getElementById('navLinks');
+  toggle.addEventListener('click', () => {
+    toggle.classList.toggle('open');
+    links.classList.toggle('open');
+  });
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  const spotlight = document.getElementById('spotlight');
+  window.addEventListener('mousemove', e => {
+    spotlight.style.setProperty('--x', e.clientX + 'px');
+    spotlight.style.setProperty('--y', e.clientY + 'px');
+  });
+</script>
+</body>
+</html>

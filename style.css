@@ -693,6 +693,111 @@ footer {
 }
 .form-submit:hover { opacity: 0.88; transform: translateY(-1px); }
 
+/* ── Project card as link ── */
+a.project-card {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ── Project Detail Page ── */
+.project-detail-hero {
+  padding: calc(var(--nav-h) + 60px) 0 64px;
+}
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin-bottom: 40px;
+  transition: color 0.2s;
+}
+.back-link:hover { color: var(--accent2); }
+
+.project-detail-head {
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.project-detail-head h1 {
+  font-family: var(--font-head);
+  font-size: clamp(2.4rem, 7vw, 4.2rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--white);
+}
+.project-detail-head h1 .accent { color: var(--accent2); }
+
+.project-screenshot-section { padding: 0 0 96px; }
+.project-mockup {
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  max-width: 420px;
+  margin: 0 auto;
+  box-shadow: 0 32px 80px rgba(0,0,0,0.4);
+}
+.project-mockup img { width: 100%; display: block; }
+
+.project-info-section { padding: 0 0 96px; }
+.project-info-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 56px;
+}
+@media (min-width: 860px) {
+  .project-info-grid { grid-template-columns: 1fr 1fr; }
+  .project-info-block:first-child { grid-column: 1 / -1; }
+}
+
+.project-info-block h2 {
+  font-family: var(--font-head);
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--white);
+  margin-bottom: 24px;
+}
+.project-info-block p {
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: var(--muted);
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+.project-info-block p strong { color: var(--text); font-weight: 500; }
+.project-info-block p:last-child { margin-bottom: 0; }
+
+.stack-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.stack-list li {
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: var(--muted);
+  line-height: 1.6;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border);
+}
+.stack-list li:last-child { border-bottom: none; padding-bottom: 0; }
+.stack-label {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent2);
+  margin-right: 10px;
+  min-width: 72px;
+}
+
 /* ── Scroll reveal ── */
 .reveal {
   opacity: 0;
