@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ana Martini — Plataforma de cursos online. LMS full-stack construido con Django y React.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Ana Martini — Federico Olivares</title>
+</head>
+<body>
+<div class="spotlight" id="spotlight"></div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="esp.html" class="nav-logo">Federico<span>.</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">English</a></li>
+      <li><a href="esp.html#proyectos">Proyectos</a></li>
+      <li><a href="contacto.html" class="nav-cta">Contacto</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- PROJECT HERO -->
+<section class="project-detail-hero">
+  <div class="container">
+    <a href="esp.html#proyectos" class="back-link">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M13 7H1M7 1L1 7l6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Volver a proyectos
+    </a>
+    <div class="project-detail-head">
+      <div class="tag">Caso de estudio</div>
+      <h1>Ana Martini<br><span class="accent">Plataforma de Cursos</span></h1>
+      <p class="hero-sub">Un sistema de gestión de aprendizaje full-stack construido para una maquilladora profesional — desde el registro hasta la entrega de cursos, todo en un solo lugar.</p>
+      <a href="https://anniegrafica.up.railway.app/" target="_blank" rel="noopener" class="btn-primary">
+        Ver sitio en vivo
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- SCREENSHOT -->
+<section class="project-screenshot-section">
+  <div class="container">
+    <div class="project-mockup reveal">
+      <div class="phone-frame">
+        <div class="phone-notch"></div>
+        <div class="phone-screen">
+          <img src="images/anmartini.jpg" alt="Plataforma Ana Martini en mobile">
+        </div>
+        <div class="phone-home-bar"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INFO -->
+<section class="project-info-section">
+  <div class="container">
+    <div class="project-info-grid">
+
+      <div class="project-info-block reveal">
+        <h2>Stack</h2>
+        <ul class="stack-list">
+          <li><span class="stack-label">Backend</span> Django 6 · Django REST Framework · Simple JWT</li>
+          <li><span class="stack-label">Frontend</span> React 19 · Vite · Zustand · React Query · Axios</li>
+          <li><span class="stack-label">Base de datos</span> PostgreSQL (Railway)</li>
+          <li><span class="stack-label">Auth</span> JWT con rotación y blacklisting de tokens</li>
+          <li><span class="stack-label">Email</span> Gmail SMTP — recuperación de contraseña y notificaciones</li>
+          <li><span class="stack-label">Archivos estáticos</span> Whitenoise</li>
+          <li><span class="stack-label">Hosting</span> Railway — API Django + sitio React + PostgreSQL</li>
+          <li><span class="stack-label">Video</span> Embed de YouTube — sin costos de almacenamiento</li>
+        </ul>
+      </div>
+
+      <div class="project-info-block reveal">
+        <h2>Sobre el proyecto</h2>
+        <p>Ana Martini es una maquilladora profesional con 15 años de experiencia en maquillaje social, artístico, infantil y de murga. Necesitaba una plataforma para vender y entregar sus cursos online — simple de gestionar para ella, clara y fácil de usar para sus alumnas.</p>
+        <p>El resultado es un LMS full-stack con navegación de cursos, registro de usuarios, control de acceso autenticado con JWT, y un sistema de mensajería integrado donde los alumnos pueden contactar a la instructora y solicitar acceso a los cursos directamente.</p>
+        <p>El contenido está organizado en Cursos → Módulos → Videos, con una combinación de contenido gratuito de vista previa y lecciones de pago bloqueadas. Los alumnos pueden ver qué hay adentro antes de comprometerse.</p>
+      </div>
+
+      <div class="project-info-block reveal">
+        <h2>Decisiones clave</h2>
+        <p><strong>YouTube para el hosting de videos.</strong> En lugar de almacenar archivos de video en la nube — lo que genera costos de almacenamiento y ancho de banda de inmediato — todos los videos de los cursos se embeben desde YouTube. Esto mantiene los costos de hosting en cero mientras el negocio crece, y puede migrarse a un CDN dedicado cuando la escala lo justifique.</p>
+        <p><strong>Acceso concedido manualmente.</strong> No hay pasarela de pago integrada aún. Los alumnos solicitan acceso a través del sistema de mensajería, Ana confirma el pago externamente (transferencia bancaria, etc.), y otorga el acceso manualmente desde el panel de administración. Simple y práctico para una operación en etapa inicial.</p>
+        <p><strong>Panel admin propio.</strong> Sin el admin de Django — un panel de administración personalizado en React le da a Ana control total sobre usuarios, cursos, módulos, videos y mensajes sin necesitar conocimientos técnicos.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-box reveal">
+      <div class="cta-text">
+        <h2>¿Tenés un proyecto en mente?</h2>
+        <p>Construyo productos web de principio a fin. Hablemos del tuyo.</p>
+      </div>
+      <a href="contacto.html" class="btn-primary">
+        Contactame
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <span class="footer-logo">Federico<span>.</span></span>
+      <span class="footer-copy">© 2025 Federico Olivares. Todos los derechos reservados.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const toggle = document.getElementById('navToggle');
+  const links  = document.getElementById('navLinks');
+  toggle.addEventListener('click', () => {
+    toggle.classList.toggle('open');
+    links.classList.toggle('open');
+  });
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  const spotlight = document.getElementById('spotlight');
+  window.addEventListener('mousemove', e => {
+    spotlight.style.setProperty('--x', e.clientX + 'px');
+    spotlight.style.setProperty('--y', e.clientY + 'px');
+  });
+</script>
+</body>
+</html>
