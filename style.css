@@ -108,17 +108,24 @@ nav {
   transition: color 0.2s, background 0.2s;
 }
 .nav-links a:hover { color: var(--text); background: var(--bg3); }
-.nav-links a.active { color: var(--accent) !important; background: rgba(191,67,66,0.08); }
 
-.nav-links .nav-cta {
-  color: var(--white);
-  background: var(--accent);
-  padding: 7px 16px;
-  border-radius: 6px;
-  font-weight: 500;
-  transition: opacity 0.2s;
+/* Active page — terracota chip, same on desktop and mobile */
+.nav-links a.active,
+.nav-links a.active:hover {
+  color: var(--white) !important;
+  background: var(--accent) !important;
+  opacity: 1;
 }
-.nav-links .nav-cta:hover { opacity: 0.85; background: var(--accent); color: var(--white); }
+
+/* nav-cta looks identical to other links — active class handles highlight */
+.nav-links .nav-cta {
+  color: var(--muted);
+  background: transparent;
+  padding: 6px 12px;
+  font-weight: 400;
+  transition: color 0.2s, background 0.2s;
+}
+.nav-links .nav-cta:hover { color: var(--text); background: var(--bg3); opacity: 1; }
 
 /* Mobile nav — Pages dropdown */
 .pages-toggle {
@@ -179,9 +186,7 @@ nav {
     border-radius: 8px;
   }
   .nav-links .nav-cta {
-    margin-top: 4px;
-    text-align: center;
-    justify-content: center;
+    margin-top: 0;
   }
 }
 
